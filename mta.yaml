@@ -1,0 +1,12 @@
+ID: ChatBotSrv
+_schema-version: '2.1'
+version: 0.0.1
+
+modules:
+ - name: interceptor
+   type: nodejs
+   path: interceptor
+   provides:
+    - name: interceptor_api
+      properties:
+         url: ${default-url}
