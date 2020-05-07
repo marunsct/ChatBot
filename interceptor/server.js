@@ -30,7 +30,24 @@ app.use(bodyParser.json());
  * Routes Definitions
  */
 app.get("/", (req, res) => {
-	res.status(200).send("Initial Request ");
+//	res.status(200).send("Initial Request ");
+var	reply = [{
+						type: 'text',
+						content: "how are you"
+					}, {
+						type: 'text',
+						content: "How Can I help you?"
+					}];
+				var response = JSON.stringify({
+				replies: reply,
+				conversation: {
+					memory: req.body.conversation.memory
+				}
+			});
+			//console.log(respon + 'hii');
+			res.statusCode = 200;
+			res.setHeader('content-type', 'application/json');
+			res.send(response);				
 });
 
 // Get status of a Sales Order
