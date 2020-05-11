@@ -41,7 +41,7 @@ var	reply = [{
 				var response = JSON.stringify({
 				replies: reply,
 				conversation: {
-					memory: req.body.conversation.memory
+					memory: ""
 				}
 			});
 			//console.log(respon + 'hii');
